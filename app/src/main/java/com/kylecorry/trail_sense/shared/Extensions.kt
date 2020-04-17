@@ -41,6 +41,17 @@ fun LocalDateTime.toDisplayFormat(ctx: Context): String {
     }
 }
 
+fun LocalTime.toDisplayFormat(ctx: Context): String {
+    val prefs = PreferenceManager.getDefaultSharedPreferences(ctx)
+    val use24Hr = prefs.getBoolean(ctx.getString(R.string.pref_use_24_hour), false)
+
+    return if (use24Hr) {
+        this.format(DateTimeFormatter.ofPattern("H:mm"))
+    } else {
+        this.format(DateTimeFormatter.ofPattern("h:mm a"))
+    }
+}
+
 fun Duration.formatHM(): String {
     val hours = this.toHours()
     val minutes = this.toMinutes() % 60

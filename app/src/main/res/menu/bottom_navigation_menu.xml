@@ -22,6 +22,12 @@
         app:showAsAction="ifRoom" />
 
     <item
+        android:id="@+id/action_nature"
+        android:title="@string/nature"
+        android:icon="@drawable/fish"
+        app:showAsAction="ifRoom" />
+
+    <item
         android:id="@+id/action_settings"
         android:title="@string/action_settings"
         android:icon="@drawable/ic_settings"

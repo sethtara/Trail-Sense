@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.kylecorry.trail_sense.astronomy.ui.DayTimeChartView
+        android:id="@+id/solunar_chart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        app:cursorImage="@drawable/fish"
+        app:cursorImageColor="@color/day"
+        app:cursorLineColor="@color/cursor_color"
+        app:cursorLineWidth="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_indicator" />
+
+    <TextView
+        android:id="@+id/activity_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        tools:text="@string/animal_activity_low" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_top_margin"
+        android:text="@string/animal_activity_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="@string/today"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/solunar_minor_times"
+        app:layout_constraintTop_toBottomOf="@+id/solunar_chart" />
+
+    <TextView
+        android:id="@+id/solunar_major_times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:textAlignment="textStart"
+        app:layout_constraintStart_toEndOf="@+id/solunar_major"
+        app:layout_constraintTop_toTopOf="@+id/solunar_major"
+        app:lineHeight="24sp"
+        tools:text="6:00 AM\n4:00 PM" />
+
+    <TextView
+        android:id="@+id/solunar_minor_times"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textAlignment="textStart"
+        app:layout_constraintStart_toStartOf="@+id/solunar_major_times"
+        app:layout_constraintTop_toTopOf="@+id/solunar_minor"
+        app:lineHeight="24sp"
+        tools:text="12:00 PM\n9:00 PM" />
+
+    <TextView
+        android:id="@+id/solunar_minor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/solunar_minor"
+        app:layout_constraintStart_toStartOf="@+id/solunar_major"
+        app:layout_constraintTop_toBottomOf="@+id/solunar_major_times" />
+
+    <TextView
+        android:id="@+id/solunar_major"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/solunar_major"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tomorrow"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/solunar_major_times_tomorrow"
+        app:layout_constraintTop_toTopOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/solunar_major_times_tomorrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:textAlignment="textStart"
+        app:layout_constraintStart_toEndOf="@+id/solunar_major_times"
+        app:layout_constraintTop_toTopOf="@+id/solunar_major_times"
+        app:lineHeight="24sp"
+        tools:text="6:00 AM\n4:00 PM" />
+
+    <TextView
+        android:id="@+id/solunar_minor_times_tomorrow"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textAlignment="textStart"
+        app:layout_constraintStart_toStartOf="@+id/solunar_major_times_tomorrow"
+        app:layout_constraintTop_toTopOf="@+id/solunar_minor"
+        app:lineHeight="24sp"
+        tools:text="12:00 PM\n9:00 PM" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

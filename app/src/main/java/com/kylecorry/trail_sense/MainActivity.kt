@@ -11,6 +11,7 @@ import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import androidx.preference.PreferenceManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.kylecorry.trail_sense.animals.ui.NatureFragment
 import com.kylecorry.trail_sense.astronomy.ui.AstronomyFragment
 import com.kylecorry.trail_sense.navigation.ui.NavigatorFragment
 import com.kylecorry.trail_sense.shared.doTransaction
@@ -86,6 +87,9 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.action_astronomy -> {
                 switchFragment(AstronomyFragment())
+            }
+            R.id.action_nature -> {
+                switchFragment(NatureFragment())
             }
             R.id.action_settings -> {
                 switchFragment(SettingsFragment())
