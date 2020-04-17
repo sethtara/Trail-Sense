@@ -24,7 +24,7 @@
     <item
         android:id="@+id/action_nature"
         android:title="@string/nature"
-        android:icon="@drawable/fish"
+        android:icon="@drawable/ic_nature"
         app:showAsAction="ifRoom" />
 
     <item
